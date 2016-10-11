@@ -32,11 +32,9 @@ class App extends Component {
 
      refreshData=()=>{
 
-         httpClient.get('http://localhost:3004/surveys', this.state)
+         httpClient.get('http://localhost:3004/surveys')
              .then((response)=> {
-
                  var data =response.data;
-
                  this.setState({
                      records:data
                  })
@@ -77,9 +75,12 @@ class App extends Component {
 
     saveSurvey = ()=> {
 
-        httpClient.post('http://localhost:3004/surveys', this.state)
-            .then((response)=> {
+        var data = this.state;
+         delete data.records;
 
+        httpClient.post('http://localhost:3004/surveys',
+         data)
+            .then((response)=> {
                 this.refreshData();
             }).catch((error)=> {
 
