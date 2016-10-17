@@ -1,22 +1,44 @@
 {
   "surveys": [
     {
-      "name": "Diccion",
-      "color": "blue",
-      "movies": [
-        "harry potter"
-      ],
+      "name": "labang",
+      "death": "suicide",
       "gender": "male",
-      "id": 1
+      "movies": [
+        "Friend",
+        "GF/BF"
+      ],
+      "id": 6,
+      "suggestion": "sakit daw ang bustedon ni lea "
     },
     {
-      "name": "Diccion",
-      "color": "blue",
-      "movies": [
-        "harry potter"
-      ],
+      "name": "labang",
+      "death": "murder",
       "gender": "male",
-      "id": 4
+      "movies": [
+        "GF/BF"
+      ],
+      "id": 7,
+      "suggestion": "sdsdfas"
+    },
+    {
+      "name": "labang",
+      "death": "murder",
+      "gender": "male",
+      "movies": [
+        "GF/BF"
+      ],
+      "id": 8
+    },
+    {
+      "name": "labang",
+      "death": "murder",
+      "gender": "male",
+      "movies": [
+        "GF/BF"
+      ],
+      "id": 9,
+      "suggestion": "hahahhaha"
     }
   ]
 }
