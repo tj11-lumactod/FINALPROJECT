@@ -1,44 +1,26 @@
 {
   "surveys": [
     {
-      "name": "labang",
-      "death": "suicide",
-      "gender": "male",
-      "movies": [
-        "Friend",
-        "GF/BF"
-      ],
-      "id": 6,
-      "suggestion": "sakit daw ang bustedon ni lea "
-    },
-    {
-      "name": "labang",
+      "name": "Orland",
       "death": "murder",
       "gender": "male",
+      "suggestion": "yeah",
       "movies": [
-        "GF/BF"
+        "Family",
+        "GF/BF",
+        "Friend"
       ],
-      "id": 7,
-      "suggestion": "sdsdfas"
+      "id": 1
     },
     {
-      "name": "labang",
+      "name": "siya",
       "death": "murder",
       "gender": "male",
+      "suggestion": "s",
       "movies": [
-        "GF/BF"
+        "Family"
       ],
-      "id": 8
-    },
-    {
-      "name": "labang",
-      "death": "murder",
-      "gender": "male",
-      "movies": [
-        "GF/BF"
-      ],
-      "id": 9,
-      "suggestion": "hahahhaha"
+      "id": 2
     }
   ]
 }

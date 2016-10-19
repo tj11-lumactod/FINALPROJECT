@@ -19,14 +19,13 @@ class App extends Component {
     state = {
         name: "",
         death: "",
-        movies: [],
+        movies: [],   
         gender: "",
 	    suggestion:"",
         records:[],
         show: false,
-        selectedName: "",
-        
-	    selectedDeath: "",
+        selectedName: "",     
+	    selectedDeath: "",         
         selectedMovies: [],
         selectedGender: "",
         selectedsuggestion: "",
@@ -261,60 +260,62 @@ class App extends Component {
             <div className="container">
                 <h1> {this.state.suway} </h1>
                 <div className="page-header">
-
-                    
+                 <center><h2>CUSTOMER CARE AREA</h2> </center>
                 </div>
                 <div className="jumbotron">
                     <Grid>
                         <Row>
-                            <Col md={5}>
+                            <Col md={4}>
                                 <Form>
                                     <FormGroup>
-                                        <ControlLabel>Name here ...</ControlLabel>
+                                        <ControlLabel>Customer Name:</ControlLabel>
                                         <FormControl
                                             type="text"
-                                            placeholder="Name to Die..."
+                                            placeholder="Name of Customer"
                                             value={this.state.name}
                                             onChange={this.onChange('name')}
                                             />
-                                        <HelpBlock>The human whose name is written in this note shall die </HelpBlock>
+                                        <HelpBlock>Use to find Customer name</HelpBlock>
                                     </FormGroup>
 
 
-                                    {/*-------------------------------------------------------------------------*/}
+                                    {}
                                     <FormGroup>
-                                        <ControlLabel>Cause Of Death</ControlLabel>
+                                        <ControlLabel>Type of Customer</ControlLabel>
                                         <FormControl componentClass="select"
-                                                     placeholder="death here..."
-                                                     value={this.state.death}
-                                                     onChange={this.onChange('death')}
+                                                     placeholder="Type here..."
+                                                     value={this.state.type}
+                                                     onChange={this.onChange('type')}
                                             >
-                                            <option value="suicide">suicide</option>
-                                            <option value="murder">murder</option>
-                                            <option value="accident">accident</option>
+                                            <option value="student">Student</option>
+                                            <option value="senior">Senior Citizen</option>
+                                            <option value="regular">Regular</option>
                                         </FormControl>
-                                        <HelpBlock>If the cause of death is written within 40 seconds of writing the person's name it will happen </HelpBlock>
+                                        <HelpBlock>Uses to identify customer type</HelpBlock>
                                     </FormGroup>
-                                     {/*-------------------------------------------------------------------------*/}
+
+
+
+                                     {}
                                     <FormGroup>
-                                        <ControlLabel>suspect</ControlLabel>
-                                        <Checkbox value="Family"
-                                                  checked={this.state.movies.indexOf('Family')>=0 ? true:false}
+                                        <ControlLabel>Type of Needs</ControlLabel>
+                                        <Checkbox value="SchoolSupplies"
+                                                  checked={this.state.movies.indexOf('SchoolSupplies')>=0 ? true:false}
                                                   onChange={this.checkboxChange('movies')}>
-                                            Family 
+                                          School Supplies
                                         </Checkbox>
-                                        <Checkbox value="GF/BF"
-                                                  checked={this.state.movies.indexOf('GF/BF')>=0 ? true:false}
+                                        <Checkbox value="Groceries"
+                                                  checked={this.state.movies.indexOf('Groceries')>=0 ? true:false}
                                                   onChange={this.checkboxChange('movies')}>
-                                            GF/BF
+                                         Groceries
                                         </Checkbox>
-                                        <Checkbox value="Friend"
-                                                  checked={this.state.movies.indexOf('Friend')>=0 ? true:false}
+                                        <Checkbox value="Others"
+                                                  checked={this.state.movies.indexOf('Others')>=0 ? true:false}
                                                   onChange={this.checkboxChange('movies')}>
-                                            Friend
+                                          Others
                                         </Checkbox>
                                     </FormGroup>
-                                     {/*-------------------------------------------------------------------------*/}
+                                     {}
                                     <FormGroup>
                                         <ControlLabel>Gender </ControlLabel>
                                         <Radio name="gender" value="male"
@@ -326,18 +327,11 @@ class App extends Component {
 
 
 
-
-
-
-
-
-
-
-{/*------------------------------------------------------------------------------------------------------------------------------- */}
+{}
 
 
                                     <FormGroup>
-                                        <ControlLabel>Details of the deaths should be written</ControlLabel>
+                                        <ControlLabel>Customer Comment:</ControlLabel>
                                         <textarea
                                             type="textarea"
                                             placeholder="Tell us what you think..."
@@ -350,7 +344,7 @@ class App extends Component {
 
 
 
-{/*------------------------------------------------------------------------------------------------------------------------------- */}
+{}
 
 
 
@@ -367,16 +361,16 @@ class App extends Component {
 
 
 
-                                        <Button bsStyle="primary" onClick={this.saveSurvey}>Time to Die</Button>
+                                        <Button bsStyle="primary" onClick={this.saveSurvey}>Save Info</Button>
 
                                     </ButtonGroup>
                                 </Form>
                             </Col>
-<div className="lobot"></div>
-{/*End of the col */}
+<div className="tj"></div>
+{}
 
-{/*start of the col */}
-{/*------------------------------------------------------------------------------------------------------------------------------- */}
+{}
+{}
       <Col md={2}>
         
        <FormGroup></FormGroup>
@@ -407,10 +401,10 @@ class App extends Component {
                                         <th>Edit</th>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Death type</th>
-                                        <th>Suspect</th>
+                                        <th>Customer type</th>
+                                        <th>Type of Needs</th>
                                         <th>Gender</th>
-					<th>Other Information</th>
+					 <th>Comment</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -422,6 +416,8 @@ class App extends Component {
                     </Grid>
 
                 </div>
+
+
                  <div className="modal-container" style={{height: 200}}>
                     <Modal
                     show={this.state.show}
@@ -434,52 +430,53 @@ class App extends Component {
                     </Modal.Header>
                     <Modal.Body>
                     <Form>
+                                                
                                                 <FormGroup>
-                                                    <ControlLabel>Name please ...</ControlLabel>
+                                                    <ControlLabel>Customer name:</ControlLabel>
                                                     <FormControl
                                                         type="text"
-                                                        placeholder="Name to Die..."
+                                                        placeholder="name of customer..."
                                                         value={this.state.selectedName}
                                                         onChange={this.modalonChange('selectedName')}
                                                         />
-                                                    <HelpBlock>The human whose name is written in this note shall die </HelpBlock>
+                                                    <HelpBlock>Use to find customer name</HelpBlock>
                                                 </FormGroup>
 
 
 
                                                 <FormGroup>
-                                                    <ControlLabel>Cause Of Death</ControlLabel>
+                                                    <ControlLabel>Type of customer</ControlLabel>
                                                     <FormControl componentClass="select"
-                                                                placeholder="Death type..."
-                                                                value={this.state.selectedDeath}
-                                                                onChange={this.modalonChange('selectedDeath')}
+                                                                placeholder="Type here..."
+                                                                value={this.state.type}
+                                                                onChange={this.modalonChange('type')}
                                                         >
-                                                        <option value="suicide">suicide</option>
-                                                        <option value="murder">murder</option>
-                                                        <option value="accident">accident</option>
+                                                        <option value="student">Student</option>
+                                                        <option value="senior">Senior Citizen</option>
+                                                        <option value="regulart">Regular</option>
                                                     </FormControl>
-                                                    <HelpBlock>If the cause of death is written within 40 seconds of writing the person's name it will happen</HelpBlock>
+                                                    <HelpBlock>Uses to identify customer type</HelpBlock>
                                                 </FormGroup>
 
 
 
 
                                                 <FormGroup>
-                                                    <ControlLabel>suspect </ControlLabel>
-                                                    <Checkbox value="Family "
-                                                            checked={this.state.selectedMovies.indexOf('Family ')>=0 ? true:false}
+                                                    <ControlLabel>Type of needs</ControlLabel>
+                                                    <Checkbox value="School supplies"
+                                                            checked={this.state.selectedMovies.indexOf('School supplies')>=0 ? true:false}
                                                             onChange={this.modalcheckboxChange('selectedMovies')}>
-                                                        Family
+                                                       School supplies
                                                     </Checkbox>
-                                                    <Checkbox value="GF/BF"
-                                                            checked={this.state.selectedMovies.indexOf('GF/BF')>=0 ? true:false}
+                                                    <Checkbox value="Groceries"
+                                                            checked={this.state.selectedMovies.indexOf('Groceries')>=0 ? true:false}
                                                             onChange={this.modalcheckboxChange('selectedMovies')}>
-                                                       GF/BF
+                                                    Groceries
                                                     </Checkbox>
-                                                    <Checkbox value="Friend"
-                                                            checked={this.state.selectedMovies.indexOf('Friend')>=0 ? true:false}
+                                                    <Checkbox value="Others"
+                                                            checked={this.state.selectedMovies.indexOf('Others')>=0 ? true:false}
                                                             onChange={this.modalcheckboxChange('selectedMovies')}>
-                                                        Friend
+                                                     Others
                                                     </Checkbox>
                                                 </FormGroup>
                                                
@@ -496,7 +493,8 @@ class App extends Component {
 
 
 					<FormGroup>
-                                        <ControlLabel>Details of the deaths should be written</ControlLabel>
+                    
+                                        <ControlLabel>Customer comment:</ControlLabel>
                                         <textarea
                                             type="textarea"
                                             placeholder="Tell us what you think..."
@@ -514,7 +512,7 @@ class App extends Component {
 
 						 <ButtonGroup>
 
-                                                    <Button bsStyle="primary" onClick={this.saveEdit(this.state.selectedId)}>Time to Die</Button>
+                                                    <Button bsStyle="primary" onClick={this.saveEdit(this.state.selectedId)}>Save Info</Button>
 
                                                 </ButtonGroup>
                                             </Form>
